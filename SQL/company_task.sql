@@ -14,60 +14,65 @@ c.CompanyName
 FROM
 Customers  c
 INNER JOIN
-     	 Orders o
+Orders o
 ON  c. CustomerID = o. CustomerID
 WHERE
- o.OrderDate NOT BETWEEN ‘15.11.1996’ AND ‘18.02.1997’;
+o.OrderDate NOT BETWEEN ‘15.11.1996’ AND ‘18.02.1997’;
 
 Задание 2
+
 SELECT
 CompanyName
 FROM
 Customers
 WHERE
- City = ‘México D.F.’;
+City = ‘México D.F.’;
 
 Задание 3
- SELECT
+
+SELECT
 OrderID, OrderDate
 FROM
 Orders
 WHERE
- OrderDate BETWEEN ‘12.12.1996’ AND ‘18.02.1997’;
+OrderDate BETWEEN ‘12.12.1996’ AND ‘18.02.1997’;
 
 Задание 4
+
 SELECT
 CustomerID
 FROM
 Customers
 WHERE
- CompanyName LIKE ‘An%’;
- Задание 5
+CompanyName LIKE ‘An%’;
+
+Задание 5
+
 SELECT
 c.CompanyName, o. OrderID
 FROM
 Customers  c
 INNER JOIN
-     	 Orders o
+Orders o
 ON  c. CustomerID = o. CustomerID
 WHERE
- o. OrderSum  > 17000;
-
+o. OrderSum  > 17000;
 
 Задание 6
+
 SELECT
 CustomerID, OrderSum
 FROM
 Orders
 ORDER BY
- CustomerID DESC;
-
+CustomerID DESC;
 
 Задание 7
+
 SELECT
 c. CustomerID, o. OrderDate
 FROM
 Customers  c
 LEFT JOIN
-     	 Orders o
+Orders o
 ON  c. CustomerID = o. CustomerID;
